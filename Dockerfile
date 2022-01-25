@@ -7,4 +7,5 @@ CMD ["npm", "run", "build"]
 #/app/build is where the build will be stored
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
