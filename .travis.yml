@@ -6,7 +6,7 @@ before_install:
   - docker build -t matipadocker/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run matipadocker/docker-react npm run test -- --coverage
+  - docker run -e CI=true matipadocker/docker-react npm run test -- --coverage
 
 
 deploy:
